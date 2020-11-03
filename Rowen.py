@@ -4,6 +4,8 @@ print("Rowen.py")
 print("October 2020")
 print("------------------------")
 
+CURRENCY = " Iron"
+
 Minecraft_Price = 200 
 Minecraft_dungeons_Price = 400
 Call_of_duty_warfare_Price = 100
@@ -12,8 +14,6 @@ Call_of_duty_warfare_Price = 100
 
 
 print("What are you going to buy?")
-print("Minecraft :" +)
-print("Minecraft dungeons :" +)
-print("Call of duty warfare :" +)
-print("Escape of tarkov :" + str( )
-print("Total War : ROME 2 :" +)
+print("Minecraft :" + str(Minecraft_Price) + CURRENCY)
+print("Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
+print("Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
