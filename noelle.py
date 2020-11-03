@@ -13,8 +13,19 @@ health_potion = 10
 
 
 print("What are you buying?")
-print("Wizard hat : " + str(wizard_hat_price) + CURRENCY)
-print("Magic Sword : " + str(magic_sword_price) + CURRENCY)
-print("Health Potion : " + str(health_potion) + CURRENCY)
+print("A.)" +"Wizard hat : " + str(wizard_hat_price) + CURRENCY)
+print("B.)" +"Magic Sword : " + str(magic_sword_price) + CURRENCY)
+print("C.)" +"Health Potion : " + str(health_potion) + CURRENCY)
 print("* Taxes not included")
+
+def take_input():
+    print("Enter your Selection here:")
+    selection = input()
+    return selection
+
+menu_select = take_input()
+
+print("You selected : " + menu_select)
+
+    
 
