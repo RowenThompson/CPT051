@@ -34,7 +34,9 @@ def name_of_function():
 #------------------------------------Main-------------------------
 #code below
 
-buy_menu()
+show_buy_menu()
+show_buy_menu()
+show_buy_menu()
 
 menu_select = take_input()
 
