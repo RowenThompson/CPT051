@@ -23,6 +23,17 @@ def take_input():
     selection = input()
     return selection
 
+def error_message():
+    print("Error")
+
+def name_of_function():
+    print("Code statment 1")
+    print("Code statment 2")
+
+#functions above
+    #------------------------------------Main-------------------------
+#code below
+
 menu_select = take_input()
 
 print("You selected : " + menu_select)
