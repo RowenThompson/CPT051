@@ -11,13 +11,13 @@ Minecraft_Price = 200
 Minecraft_dungeons_Price = 400
 Call_of_duty_warfare_Price = 100
 
-def Buy_menu():
+def Show_Buy_menu():
     print("Buy menu")
-    
+
 print("What are you going to buy?")
-print("Minecraft :" + str(Minecraft_Price) + CURRENCY)
-print("Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
-print("Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
+print("A.)Minecraft :" + str(Minecraft_Price) + CURRENCY)
+print("B.)Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
+print("C.)Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
 print("Taxes not included")
 
 def take_input():
@@ -25,14 +25,19 @@ def take_input():
     selection = input()
     return selection
 
-def Error_message():
-    print("Error")
+def name_of_function():
+    print("Code statment 1")
+    print("Code statment 2")
+    
+    print("Code statment 3")
 
 #Functions above
     #----------------------------------Main--------------------------------
 #code below
 
-Buy_menu()
+Show_Buy_menu()
+Show_Buy_menu()
+Show_Buy_menu()
 
 menu_select = take_input()
 
