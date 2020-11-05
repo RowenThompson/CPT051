@@ -1,8 +1,9 @@
-print("Noelle Adkin")
-print("CPT051")
-print("noelle.py")
-print("October 2020")
-print("--------------------")
+def author_sig():
+    print("Noelle Adkin")
+    print("CPT051")
+    print("noelle.py")
+    print("October 2020")
+    print("--------------------")
 
 TAX = .01
 CURRENCY = " Gold pieces"
@@ -29,6 +30,8 @@ def error_message():
 def name_of_function():
     print("Code statment 1")
     print("Code statment 2")
+
+    print("code statment 3")
 
 #functions above
 #------------------------------------Main-------------------------
