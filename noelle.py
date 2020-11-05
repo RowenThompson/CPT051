@@ -31,7 +31,7 @@ def name_of_function():
     print("Code statment 2")
 
 #functions above
-    #------------------------------------Main-------------------------
+#------------------------------------Main-------------------------
 #code below
 
 buy_menu()
