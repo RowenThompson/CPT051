@@ -4,7 +4,8 @@ print("Rowen.py")
 print("October 2020")
 print("------------------------")
 
-CURRENCY = " Iron"
+CURRENCY = "Iron"
+
 TAX = 0.01
 
 Minecraft_Price = 200 
@@ -13,12 +14,11 @@ Call_of_duty_warfare_Price = 100
 
 def Show_Buy_menu():
     print("Buy menu")
-
-print("What are you going to buy?")
-print("A.)Minecraft :" + str(Minecraft_Price) + CURRENCY)
-print("B.)Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
-print("C.)Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
-print("Taxes not included")
+    print("What are you going to buy?")
+    print("A.)Minecraft :" + str(Minecraft_Price) + CURRENCY)
+    print("B.)Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
+    print("C.)Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
+    print("Taxes not included")
 
 def take_input():
     print("Enter your selection here")
@@ -28,7 +28,6 @@ def take_input():
 def name_of_function():
     print("Code statment 1")
     print("Code statment 2")
-    
     print("Code statment 3")
 
 #Functions above
