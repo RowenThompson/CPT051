@@ -1,8 +1,9 @@
-print("Rowen Thompson")
-print("CPT051")
-print("Rowen.py")
-print("October 2020")
-print("------------------------")
+def Author_aig():
+    print("Rowen Thompson")
+    print("CPT051")
+    print("Rowen.py")
+    print("October 2020")
+    print("------------------------")
 
 CURRENCY = "Iron"
 
