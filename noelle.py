@@ -34,6 +34,8 @@ def name_of_function():
     #------------------------------------Main-------------------------
 #code below
 
+buy_menu()
+
 menu_select = take_input()
 
 print("You selected : " + menu_select)
