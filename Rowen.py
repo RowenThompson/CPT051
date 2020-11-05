@@ -29,4 +29,3 @@ menu_select = take_input()
 
 print("You selected : " + menu_select)
 print("First letter : " + menu_select[0])
-
