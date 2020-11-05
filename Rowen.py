@@ -11,7 +11,7 @@ Minecraft_Price = 200
 Minecraft_dungeons_Price = 400
 Call_of_duty_warfare_Price = 100
 
-def Name_of_buy_menu():
+def Buy_menu():
     print("Buy menu")
     
 print("What are you going to buy?")
@@ -24,6 +24,15 @@ def take_input():
     print("Enter your selection here")
     selection = input()
     return selection
+
+def Error_message():
+    print("Error")
+
+#Functions above
+    #----------------------------------Main--------------------------------
+#code below
+
+Buy_menu()
 
 menu_select = take_input()
 
