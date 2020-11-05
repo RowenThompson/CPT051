@@ -10,15 +10,19 @@ TAX = 0.01
 Minecraft_Price = 200 
 Minecraft_dungeons_Price = 400
 Call_of_duty_warfare_Price = 100
-
-
-
-
-print("What are you going to buy?")
+    
+Name = input("What is your name?" )
+print("What are you going to buy" + Name) <-----
+print("Minecraft :" + str(Minecraft_Price) + CURRENCY)
+print("Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
+print("Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
 print("Minecraft : " + str(Minecraft_Price) + CURRENCY)
 print("Minecraft dungeons : " + str(Minecraft_dungeons_Price) + CURRENCY)
 print("Call of duty warfare : " + str(Call_of_duty_warfare_Price) + CURRENCY)
 print("Taxes not included")
+
+def Name_of_function():
+    print("Buy menu")
 
 def take_input():
     print("Enter your selection here")
@@ -28,5 +32,5 @@ def take_input():
 menu_select = take_input()
 
 print("You selected : " + menu_select)
-print("First letter : " + menu_select)
+print("First letter : " + menu_select[0])
 
