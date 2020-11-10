@@ -36,16 +36,16 @@ def name_of_function():
     print("code statment 3")
 
 def calc_price(select, tax):
-    price = 0
-    if(menu_select == 'A'):
-        price = wizard_hat_price
-    elif(menu_select == 'B'):
-        price = magic_sword_price
-    elif(menu_select == 'C'):
-        price = health_potion_price
-    price = price + (price * tax)
-    return price
-    
+    price = -1
+    if(menu_select == 'A'):         #decision
+        price = wizard_hat_price        #process
+    elif(menu_select == 'B'):       #decision
+        price = magic_sword_price       #process
+    elif(menu_select == 'C'):       #decsion
+        price = health_potion_price     #process
+    price = price + (price * tax)   #process
+    return price                    #end/return
+     
 
 #functions above
 #------------------------------------Main-------------------------
@@ -57,16 +57,11 @@ show_buy_menu() #output
 menu_select = take_input() #input
 
 
-while((menu_select != 'A') and  (menu_select != 'B') and (menu_select != 'C')): 
-    error_message()
+while((menu_select != 'A') and  (menu_select != 'B') and (menu_select != 'C')): #decsion
+    error_message()#output
 
     menu_select = take_input() #input  / Loop Control Variable Change
+ 
+print(calc_price(menu_select, TAX)) #process and output
 
-if(menu_select == 'A'):
-    print("You selected A!")
-elif(menu_select == 'B'):
-    print("You selected B!")
-elif(menu_select == 'C'):
-    print("You selected C!")
-   
-print(calc_price(menu_select, TAX))
+print("end")#end
