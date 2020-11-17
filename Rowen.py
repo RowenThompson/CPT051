@@ -1,4 +1,4 @@
-def Author_aig():
+def author_aig():
     print("Rowen Thompson")
     print("CPT051")
     print("Rowen.py")
@@ -13,15 +13,19 @@ Minecraft_price = 200
 Minecraft_dungeons_price = 400
 Call_of_duty_warfare_price = 100
 
-def Show_Buy_menu():
+import random
+
+Gifts_cool = ['Phone', '20 dollars', '100 amazon gift card']
+
+def show_buy_menu():
     print("Buy menu")
     print("What are you going to buy?")
-    print("A.)Minecraft :" + str(Minecraft_Price) + CURRENCY)
-    print("B.)Minecraft dungeons :" + str(Minecraft_dungeons_Price) + CURRENCY)
-    print("C.)Call of duty warfare :" + str(Call_of_duty_warfare_Price) + CURRENCY)
+    print("A.)Minecraft :" + str(Minecraft_price) + CURRENCY)
+    print("B.)Minecraft dungeons :" + str(Minecraft_dungeons_price) + CURRENCY)
+    print("C.)Call of duty warfare :" + str(Call_of_duty_warfare_price) + CURRENCY)
     print("Taxes not included")
     
-def Error_message():
+def error_message():
     print("This is an invalid selection.")
 
 def take_input():
@@ -44,6 +48,7 @@ def calc_price(select, TAX):
         price = Minecraft_dungeons_price
     elif(menu_select == 'C'):
         price = Call_of_duty_warfare_price
+        
     price = price + (price * TAX)
     return price
 
@@ -51,7 +56,7 @@ def calc_price(select, TAX):
     #----------------------------------Main--------------------------------
 #code below
 
-+author_sig() #Terminal/start
+author_aig()
 
 show_buy_menu() #output
 
@@ -74,3 +79,7 @@ elif(menu_select == 'C'):
     print("You selected C!")
    
 print(calc_price(menu_select, TAX))
+
+print("You got a gift!")
+print(random.choice(Gifts_cool))
+print("end")
