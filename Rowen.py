@@ -15,14 +15,14 @@ Call_of_duty_warfare_price = 100
 
 import random
 
-Gifts_cool = ['Phone', '20 dollars', '100 amazon gift card']
+Gifts_cool = ['Phone', '20 dollars', '100 amazon gift card', 'Giant zombie toy', 'Big Chicken toy', 'Big brain toy meme',]
 
 def show_buy_menu():
     print("Buy menu")
     print("What are you going to buy?")
-    print("A.)Minecraft :" + str(Minecraft_price) + CURRENCY)
-    print("B.)Minecraft dungeons :" + str(Minecraft_dungeons_price) + CURRENCY)
-    print("C.)Call of duty warfare :" + str(Call_of_duty_warfare_price) + CURRENCY)
+    print("A.)Minecraft : " + str(Minecraft_price) +  CURRENCY)
+    print("B.)Minecraft dungeons : " + str(Minecraft_dungeons_price) +  CURRENCY)
+    print("C.)Call of duty warfare : " + str(Call_of_duty_warfare_price) +  CURRENCY)
     print("Taxes not included")
     
 def error_message():
