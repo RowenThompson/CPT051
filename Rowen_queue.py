@@ -1,12 +1,17 @@
 hp = 100
-dmg_queue = [12,21,31,21,31,32,41,17]
+dmg_queue = [12,21,31,21,31,32,41,1]
 
-
-while(hp > 0):
-    hp -= dmg_queue
-    print(hp)
+if (hp > 0):
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
+    hp = hp - dmg_queue.pop()
     
+print(hp)
 
-
-print("You have died")
-
+if (hp < 0):
+    print("You are dead")
