@@ -21,14 +21,13 @@ while numm <= 10:
     print("Not done!!!")
     print(numm)
     numm = numm + 1
-
 full_name = input('what is your full name? ')
-full_name = input('what is your full name? ')
-print('Hi ' + full_name)
+print('Nice to meet you ' + full_name)
 nickname = input('what do you like to be called? ')
-print('Ok thanks ' + nickname)
+print('Ok ' + nickname)
+how_are_you = input("How are you " + nickname)
 age = input('how old are you? ')
-print('Thanks ' + nickname)
+print('Thanks ' + nickname "?")
 animals = input('what type and how many animals do you have for us to help? ')
 print('thanks we will do our best to treat your ' + animals)
 hurt = input('what is wrong with your pet(s)? ')
