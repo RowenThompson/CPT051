@@ -1,0 +1,9 @@
+Use rowen_process.txt
+Watch google sheets video
+update Rowen.py to include a shopping list and an itemized receipt. 
+
+for example:
+Price, tax
+100 , 101
+200 , 202
+total=303
