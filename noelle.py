@@ -43,8 +43,12 @@ def calc_price(select, tax):
         price = magic_sword_price       #process
     elif(menu_select == 'C'):       #decsion
         price = health_potion_price     #process
-        
+    elif(menu_select == 'Q'):       #decsion
+        price = 0    #process  
     price = price + (price * tax)   #process
+    
+    if(price < 0): #process validation
+        exit()
     return price                    #end/return
      
 
@@ -53,6 +57,7 @@ def calc_price(select, tax):
 #code below
 author_sig() #Terminal/start
 
+shoppingcart_queue = []
 menu_select = 'F'
 while(menu_select != 'Q'): #runwhile
 
@@ -61,14 +66,19 @@ while(menu_select != 'Q'): #runwhile
     menu_select = take_input() #input
 
 
-    while((menu_select != 'A') and  (menu_select != 'B') and (menu_select != 'C')): #decsion
+    while((menu_select != 'A') and  (menu_select != 'B') and (menu_select != 'C') and (menu_select != 'Q')): #decsion- Validation loop
         error_message()#output
 
         menu_select = take_input() #input  / Loop Control Variable Change
         
-         
+    #add this to a queue  \/   \/  \/
     print(calc_price(menu_select, TAX)) #process and output
 
+#after while loop
+#loop and pop all items of shoppingcart_queue to recept print()
+
+    
 #You have recieved a free gift! Randomly
     print("gift")
     print("end")#end
+
