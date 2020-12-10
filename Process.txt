@@ -1,0 +1,31 @@
+1) Analyze the problem
+	Queue, while loops, list.append()
+	what are my varialbes? Price of items, taxes, shopping, 
+
+	I reviewed while loop video
+	I reviewed lists and qeueues  12/11
+	i researched list.apppend()
+	i researched data types 
+2.)Planning a solution
+	Data Dictionary price int, shopping_cart queue/list
+	Flowchart (handdrawn or draw.io)
+
+	I drew a flowchart (flowchart_12_11.jpg)
+	I wrote a data_dictionarty 
+
+3.) Coding a solution
+	Writing code statments
+
+	added while loop line_65
+
+4.)Testing and Troubleshooting
+	Test DATA(S): Use a calculator, do it on paper, use EXCEL, Google Sheets, 
+	If your data does not match your test data, check your code and check your test data
+	
+	If you have a problem: 1, 2, or 3.
+
+	Total was a negative number line_56. Returned to step 1 analyze the solution.
+
+
+	
+	
