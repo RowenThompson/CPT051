@@ -6,7 +6,8 @@ def author_aig():
     print("------------------------")
 
 CURRENCY = "Iron"
-
+BuyMore = True
+BuyMore = 0
 TAX = 0.01
 
 Minecraft_price = 200 
@@ -99,3 +100,10 @@ for item in List_for_gaming:
     elif item == 'C':
         print("You want Call of duty warfare?")
 print("Do you want to buy anything else?")
+while((BuyMore != 'Y') and (BuyMore != 'N')): #decision
+    error_message(exit):
+if BuyMore:
+    while(BuyMore <= 3):
+        BuyMore += 1
+elif():
+    exit
