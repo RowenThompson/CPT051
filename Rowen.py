@@ -12,6 +12,8 @@ TAX = 0.01
 Minecraft_price = 200 
 Minecraft_dungeons_price = 400
 Call_of_duty_warfare_price = 100
+List_for_gaming = []
+Shopping_cart = []
 
 import random
 
@@ -51,7 +53,6 @@ def calc_price(select, TAX):
         
     price = price + (price * TAX)
     return price
-
 #Functions above
     #----------------------------------Main--------------------------------
 #code below
@@ -80,6 +81,21 @@ elif(menu_select == 'C'):
    
 print(calc_price(menu_select, TAX))
 
-print("You got a gift!")
-print(random.choice(Gifts_cool))
-print("end")
+#print("You got a gift!")
+#print(random.choice(Gifts_cool))
+
+if(menu_select == 'A'):
+    List_for_gaming.append('A')
+elif(menu_select == 'B'):
+    List_for_gaming.append('B')
+elif(menu_select == 'C'):
+    List_for_gaming.append('C')
+
+for item in List_for_gaming:
+    if item == 'A':
+        print("You want Minecraft?")
+    elif item == 'B':
+        print("You want Minecraft dungeons?")
+    elif item == 'C':
+        print("You want Call of duty warfare?")
+print("Do you want to buy anything else?")
