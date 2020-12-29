@@ -1,5 +1,6 @@
 import pygame
-
+import time
+import random
 BLACK = (0, 0, 0)
 WHITE = (200, 200, 200)
 RED = (255, 0, 0)
@@ -23,9 +24,15 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-
+#action zone
         for x in range(WINDOW_WIDTH):
             draw_pix(x, x)
+            pauseUntil = time.time() + random.randint(5, 10) * 0.1
+            pygame.event.pump()
+            while time.time() < pauseUntil:
+                pygame.display.update()
+
+ #end of action zone           
         pygame.display.update()
 
     
