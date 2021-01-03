@@ -10,6 +10,7 @@ BLUE = (0,0,255)
 WINDOW_HEIGHT = 400
 WINDOW_WIDTH = 400
 blockSize = 20
+memo = {}
 
 def main():
     global SCREEN, CLOCK
@@ -27,17 +28,34 @@ def main():
                 pygame.quit()
                 sys.exit()
 #action zone
-        for x in range(WINDOW_WIDTH):
-            draw_pix(x, x)
-            pauseUntil = time.time() + random.randint(5, 10) * 0.1
-            pygame.event.pump()
-            while time.time() < pauseUntil:
-                pygame.display.update()
+        grid_trav(10,10)
 
  #end of action zone           
         pygame.display.update()
 
+
+
+def grid_trav(m,n):
+    key = (str(m) + ',' + str(n))
+
+    if(key in memo):
+        return memo[key]
+    if(m == 1 and n == 1):
+        return 1
+    if(m == 0 or n == 0):
+        return 0
+
+    time.sleep(0.5)
+    draw_pix(m, n)
+    pygame.event.pump()
+    pygame.display.update()
+
+    memo[key] = grid_trav(m - 1, n) + grid_trav(m, n - 1)
+
     
+    
+    return memo[key]
+
 
 def draw_pix(x, y):
     rect = pygame.Rect(x*blockSize, y*blockSize, blockSize, blockSize)
@@ -58,4 +76,4 @@ def drawGrid():
 if __name__ == "__main__":
     main()
     
-    SCREEN.fill(RED)
+
