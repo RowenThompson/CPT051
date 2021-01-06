@@ -53,6 +53,10 @@ while True:
 
         if keys[pygame.K_DOWN]:
             player_y += vel
+            
+        if keys[pygame.K_SPACE]:
+            player_y = 5
+            player_x = 5
 
     screen.blit(pygame.transform.scale(display, screen.get_size()), (0, 0))
     pygame.display.update()
