@@ -5,10 +5,11 @@ class Actor:
         
 class Item():
     def __init__(name, get_name, number_of_items, use,):
-
-class Object():
+        self.name = name
+        
+class MY_Object():
     def __init__(self, name, get_name, Object_brake):
-        self.name
+        self.name = name
         pass
 
 class Caster(Actor):
@@ -16,9 +17,9 @@ class Caster(Actor):
         super().__init__(mana)
         self.mana = mana
 
-def spell(self):
-        print("You cast a spell")
+    def spell(self):
+            print("You cast a spell")
 
-t = Object()
+t = MY_Object("name" , "get_name", "obj")
 
 self = ("john, mama, lol")
