@@ -1,15 +1,17 @@
 DISCOUNT_RATE = 0.25
 print("Welcome")
 
-userName = input("1" )
-itemName = input("2" )
-howMany = 2
-originalPrice = 4
+userName = input("Username: " )
+itemName = input("Itemname: " )
+howMany = float(input("Howmany: "))
+originalPrice = float(input("Price: "))
 
 
 discountAmount = originalPrice * DISCOUNT_RATE
 discountPrice = originalPrice - discountAmount
 totalCost = howMany * discountPrice
+print()
+print("Recepit")
 print(discountAmount)
 print(discountPrice)
 print(totalCost)
@@ -20,8 +22,8 @@ print(originalPrice)
 print(DISCOUNT_RATE)
 print(discountAmount)
 print(discountPrice)
-print(totalCost)
+print("total cost " + str(totalCost))
 
 print("Bye")
 
-exit()
+
