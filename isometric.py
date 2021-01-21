@@ -10,7 +10,7 @@ base_screen_size = [1000,1000]
 
 
 
-grass_img = pygame.image.load('grass.png').convert()
+grass_img = pygame.image.load('purple_grass.png').convert()
 grass_img.set_colorkey((0, 0, 0))
 
 mx = 5
