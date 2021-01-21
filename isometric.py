@@ -10,8 +10,11 @@ base_screen_size = [1000,1000]
 
 
 
-grass_img = pygame.image.load('purple_grass.png').convert()
+grass_img = pygame.image.load('cobble2.png').convert()
 grass_img.set_colorkey((0, 0, 0))
+
+goal_img = pygame.image.load('goal.png').convert()
+goal_img.set_colorkey((0, 0, 0))
 
 mx = 5
 my = 5
@@ -52,7 +55,7 @@ while True:
                 #pygame.draw.rect(display, (255, 255, 255), pygame.Rect(x * 10, y * 10, 10, 10), 1)
                 display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5))
                 if (x == player_x) and (y == player_y):
-                    display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
+                    display.blit(goal_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
                 
 
     for event in pygame.event.get():
