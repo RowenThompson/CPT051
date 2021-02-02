@@ -8,7 +8,7 @@ houseLength = float(input("House Length: "))
 houseWidth = float(input("House Width: "))
 poolLength = float(input("Pool Length: "))
 poolWidth = float(input("Pool Width: "))
-##propertyLength = floa(propertyLength)
+
 def error_message():
     print("Invalid")
 #-----------------------------------------------------------
@@ -34,7 +34,7 @@ print("Welcome To Bob's House Report")
 print("------------------------------------------------------")
 #the report about the customer's house
 #Username
-print("Username:" + userName)
+print("Username:" + str(userName))
 #Property Length
 print("Property Length:" + str(propertyLength) + " ft.")
 #Property Width
@@ -44,15 +44,15 @@ print("Property Length:" + str(propertyLength) + " ft.")
 #House Width
 print("House Width:" + str(houseWidth) + " ft.")
 #Pool Length
-print("Pool Length:" + str(poolLenght) + " ft.")
+print("Pool Length:" + str(poolLength) + " ft.")
 #Pool Width
 print("Pool Width:" + str(poolWidth) + " ft.")
 #-------------------------------------------------
 #In total
 #Covered Spuare Footage
-print("Uncovered Square Footage:" + coveredSquareFootage + " sq. ft.")
+print("Covered Square Footage:" + str(coveredSquareFootage) + " sq. ft.")
 #Uncovered Square Footage
-print("Uncovered Square Footage:" + uncoveredSquareFootage + " sq. ft.")
+print("Uncovered Square Footage:" + str(uncoveredSquareFootage) + " sq. ft.")
 #----------------------------------------------------------
 print("Good bye!")
 #End of report
