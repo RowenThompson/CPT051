@@ -16,6 +16,9 @@ grass_img.set_colorkey((0, 0, 0))
 goal_img = pygame.image.load('goal.png').convert()
 goal_img.set_colorkey((0, 0, 0))
 
+player_img = pygame.image.load('idle_0.png').convert()
+player_img.set_colorkey((0, 0, 0))
+
 mx = 5
 my = 5
 
@@ -55,7 +58,7 @@ while True:
                 #pygame.draw.rect(display, (255, 255, 255), pygame.Rect(x * 10, y * 10, 10, 10), 1)
                 display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5))
                 if (x == player_x) and (y == player_y):
-                    display.blit(goal_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
+                    display.blit(player_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
                 
 
     for event in pygame.event.get():
@@ -66,7 +69,8 @@ while True:
             if event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
-
+        #map.x = (screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF) /2;
+        #map.y = (screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF)) /2;
         mx, my = pygame.mouse.get_pos()
         true_mx = mx
         true_my = my
