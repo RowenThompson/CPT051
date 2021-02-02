@@ -8,7 +8,7 @@ houseLength = float(input("House Length: "))
 houseWidth = float(input("House Width: "))
 poolLength = float(input("Pool Length: "))
 poolWidth = float(input("Pool Width: "))
-propertyLength = str(propertyLength)
+##propertyLength = floa(propertyLength)
 def error_message():
     print("Invalid")
 #-----------------------------------------------------------
@@ -36,17 +36,17 @@ print("------------------------------------------------------")
 #Username
 print("Username:" + userName)
 #Property Length
-print("Property Length:" + propertyLength + " ft.")
+print("Property Length:" + str(propertyLength) + " ft.")
 #Property Width
-("Property Square Footage:" + propertySquareFootage + " ft.")
+("Property Square Footage:" + str(propertySquareFootage) + " ft.")
 #House Length
-("House Length:" + houseLength + " ft.")
+("House Length:" + str(houseLength) + " ft.")
 #House Width
-print("House Width:" + houseWidth + " ft.")
+print("House Width:" + str(houseWidth) + " ft.")
 #Pool Length
-print("Pool Length:" + poolLenght + " ft.")
+print("Pool Length:" + str(poolLenght) + " ft.")
 #Pool Width
-print("Pool Width:" + poolWidth + " ft.")
+print("Pool Width:" + str(poolWidth) + " ft.")
 #-------------------------------------------------
 #In total
 #Covered Spuare Footage
