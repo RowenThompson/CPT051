@@ -14,3 +14,7 @@ else:
 if(price > 0):
     print("Recepit")
     print(str((discount_rate * 100)) + "%" )
+#else:
+    #do nothing
+
+print("end")
