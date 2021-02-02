@@ -1,16 +1,16 @@
-#s
 #Start
-#Bobs house report
-print("Hello this is you're house report!")
 #----------------------------------------------------------
 #To get the information
 userName = input("UserName: ")
-propertyLength = float(input("propertyLength: "))
-propertyWidth = float(input("propertyWidth: "))
-houseLength = float(input("houseLength: "))
-houseWidth = float(input("houseWidth: "))
-poolLength = float(input("poolLength: "))
-poolWidth = float(input("poolWidth: "))
+propertyLength = float(input("Property Length: "))
+propertyWidth = float(input("Property Width: "))
+houseLength = float(input("House Length: "))
+houseWidth = float(input("House Width: "))
+poolLength = float(input("Pool Length: "))
+poolWidth = float(input("Pool Width: "))
+propertyLength = str(propertyLength)
+def error_message():
+    print("Invalid")
 #-----------------------------------------------------------
 #Getting the result for the customer
 #Calculating then the result will be propertySquareFootage
@@ -28,36 +28,31 @@ coveredSquareFootage = houseSquareFootage + poolSquareFootage
 #Calculating then the result will be uncoveredSquareFootage
 uncoveredSquareFootage = houseSquareFootage - coveredSquareFootage
 #------------------------------------------------------------
+#start of report
+print("------------------------------------------------------")
+print("Welcome To Bob's House Report")
+print("------------------------------------------------------")
 #the report about the customer's house
 #Username
-print("User Name:")
-print(userName)
+print("Username:" + userName)
 #Property Length
-print("Property Length:")
-print(propertyLength)
+print("Property Length:" + propertyLength + " ft.")
 #Property Width
-print("Property Width:")
-print(propertyWidth)
+("Property Square Footage:" + propertySquareFootage + " ft.")
 #House Length
-print("House Length:")
-print(houseLength)
+("House Length:" + houseLength + " ft.")
 #House Width
-print("House Width:")
-print(houseWidth)
+print("House Width:" + houseWidth + " ft.")
 #Pool Length
-print("Pool Length:")
-print(poolLength)
+print("Pool Length:" + poolLenght + " ft.")
 #Pool Width
-print("Pool Width:")
-print(poolWidth)
+print("Pool Width:" + poolWidth + " ft.")
 #-------------------------------------------------
 #In total
 #Covered Spuare Footage
-print("Covered Square Footage:")
-print(coveredSquareFootage)
+print("Uncovered Square Footage:" + coveredSquareFootage + " sq. ft.")
 #Uncovered Square Footage
-print("Uncovered Square Footage:")
-print(uncoveredSquareFootage)
+print("Uncovered Square Footage:" + uncoveredSquareFootage + " sq. ft.")
 #----------------------------------------------------------
-#End
 print("Good bye!")
+#End of report
