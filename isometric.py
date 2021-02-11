@@ -22,27 +22,26 @@ player_img.set_colorkey((0, 0, 0))
 mx = 5
 my = 5
 
-
-TILE_HEIGHT_HALF = 10
-TILE_WIDTH_HALF = 12
-
-game_scroll = [-500, -500]
+game_scroll = [0, 0]
 
 player_x = 5
 player_y = 5
 vel = 1
 
-def iso2screen(mx, my):
-    sx = mx * TILE_WIDTH_HALF - my * TILE_WIDTH_HALF
-    sy = mx * TILE_HEIGHT_HALF + my * TILE_HEIGHT_HALF
+a = 1
+a2 = 26.6
 
-    return sx, sy
+matrix = [
+    [a, round(math.tan(math.radians(a2)), 3)],
+    [a, round(-math.tan(math.radians(a2)), 3)]
+]
 
-def screen2iso(sx, sy):
-    mx = (sx / TILE_WIDTH_HALF + sy / TILE_HEIGHT_HALF) /2
-    my = (sy / TILE_HEIGHT_HALF -(sx / TILE_WIDTH_HALF)) /2
-    return mx, my
-    
+def transform_cords(cords):
+    cords = [cords[0] * 32, cords[1] * 32]
+    return [(cords[0] * matrix[0][0]) + (cords[1] * matrix[1][0]),
+            (cords[0] * matrix[0][1]) + (cords[1] * matrix[1][1])]
+
+
 def complex_camera(camera, target_rect):
     # we want to center target_rect
     x = -player_x + WIN_WIDTH/2 
@@ -73,21 +72,7 @@ while True:
                 display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5))
                 if (x == player_x) and (y == player_y):
                     display.blit(player_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
-
-                mx, my = pygame.mouse.get_pos()
-                mx -= (screen.get_width() - base_screen_size[0]) // 2
-                my -= (screen.get_height() - base_screen_size[1]) // 2
-                mx /= base_screen_size[0] / display.get_width()
-                my /= base_screen_size[1] / display.get_height()
-
-
-                game_mx = ((mx + game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
-                game_my = ((-mx - game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
-
-                #display.blit(player_img, (150 + mx * 10 - my * 10, 100 + mx * 5 + my * 5 - 14))
-
                 
-                display.blit(player_img, (150 + game_mx * 10 - game_my * 10, 100 + game_mx * 5 + game_my * 5 - 14))
 
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -97,9 +82,22 @@ while True:
             if event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
-                
-        
-       
+        #map.x = (screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF) /2;
+        #map.y = (screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF)) /2;
+        mx, my = pygame.mouse.get_pos()
+        true_mx = mx
+        true_my = my
+        mx -= (screen.get_width() - base_screen_size[0]) // 2
+        my -= (screen.get_height() - base_screen_size[1]) // 2
+        mx /= base_screen_size[0] / display.get_width()
+        my /= base_screen_size[1] / display.get_height()
+
+
+        game_mx = ((mx + game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
+        game_my = ((-mx - game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
+
+        if (x == game_mx) and (y == game_my):
+            display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
 
         keys = pygame.key.get_pressed()
     
