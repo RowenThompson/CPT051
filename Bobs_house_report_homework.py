@@ -29,30 +29,35 @@ coveredSquareFootage = houseSquareFootage + poolSquareFootage
 uncoveredSquareFootage = houseSquareFootage - coveredSquareFootage
 #------------------------------------------------------------
 #start of report
-print("------------------------------------------------------")
+print("```` ```` ```` ```` ```` ```` ```` ```` ```` ```` ````")
 print("Welcome To Bob's House Report")
-print("------------------------------------------------------")
+print("```` ```` ```` ```` ```` ```` ```` ```` ```` ```` ````")
 #the report about the customer's house
 #Username
 print("Username:" + str(userName))
 #Property Length
 print("Property Length:" + str(propertyLength) + " ft.")
 #Property Width
-("Property Square Footage:" + str(propertySquareFootage) + " ft.")
+print("Property Length:" + str(propertyWidth) + " ft.")
+#Property Area
+print("Property Area:" + str(propertySquareFootage) + " sq.ft.")
 #House Length
-("House Length:" + str(houseLength) + " ft.")
+print("House Length:" + str(houseLength) + " ft.")
 #House Width
 print("House Width:" + str(houseWidth) + " ft.")
+#House Area
+print("House Area:" + str(houseSquareFootage) + " sq.ft.")
 #Pool Length
 print("Pool Length:" + str(poolLength) + " ft.")
 #Pool Width
 print("Pool Width:" + str(poolWidth) + " ft.")
+#Pool Area
+print("Pool Area:" + str(poolSquareFootage) + " sq.ft.")
 #-------------------------------------------------
 #In total
 #Covered Spuare Footage
-print("Covered Square Footage:" + str(coveredSquareFootage) + " sq. ft.")
+print("Covered Area:" + str(coveredSquareFootage) + " sq. ft.")
 #Uncovered Square Footage
-print("Uncovered Square Footage:" + str(uncoveredSquareFootage) + " sq. ft.")
+print("Uncovered Area:" + str(uncoveredSquareFootage) + " sq. ft.")
 #----------------------------------------------------------
-print("Good bye!")
 #End of report
