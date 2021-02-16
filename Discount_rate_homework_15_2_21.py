@@ -8,37 +8,38 @@ TAX_RATE = .075
 print("Welcome")
 userName = str(input("userName= "))
 itemName = str(input("itemName= "))
-originalPrice = str(input("originalPrice= "))
-howMany = str(input("howMany= "))
+originalPrice = float(input("originalPrice= "))
+howMany = float(input("howMany= "))
 menuSelection = str(input("menuSelection= "))
 
 if(menuSelection == 'A'):
-    print("You selected A")
+    print("Welcome back member!")
     discountRate = DISCOUNT_RATE_MEMBER
 elif(menuSelection == 'B'):
     print("You selected B")
     if(menuSelection == 'N'):
         discountRate = DISCOUNT_RATE_NONE
-    elif(menuSelection == 'Y'):
-        discountRate = DISCOUNT_RATE_SENIOR
+    #elif(menuSelection == 'Y'):
+        #discountRate = DISCOUNT_RATE_SENIOR
 
-discountAmount = originalPrice * DISCOUNT_RATE
-discountPrice = originalPrice - discountAmount
-subTotal = howMany * discountPrice
-tax = subTotal * TAX_RATE
-totalCost = subTotal + tax
+#discountAmount = originalPrice * discountRate
+#discountPrice = originalPrice - discountAmount
+#subTotal = howMany * discountPrice
+#tax = subTotal * TAX_RATE
+#totalCost = subTotal + tax
 
-print(str((discountRate * 100)) + "%" )
+#print(str((discountRate * 100)) + "%" )
 
-if(totalCost > 0.0):
-    print(userName)
-    print(itemName)
-    print(originalPrice)
-    print(discountRate)
-    print(discountAmount)
-    print(discountPrice)
-    print(howMany)
-    print(subTotal)
-    print(tax)
-    print(totalCost)
+#if(totalCost > 0.0):
+    #print(str(userName))
+    #print(str(itemName))
+    #print(str(originalPrice))
+    #print(str(discountRate))
+    #print(str(discountAmount))
+    #print(str(discountPrice))
+    #print(str(howMany))
+    #print(str(subTotal))
+    #print(str(tax))
+    #print(str(totalCost))
 print("Good bye!")
+#print(discountRate)
