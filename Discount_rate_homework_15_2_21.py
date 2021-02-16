@@ -14,5 +14,8 @@ menuSelection = float(input("menuSelection= "))
 
 if(menuSelection == 'A'):
     print("You selected A")
-    if(meniSelection == Y):
-        print(DISCOUNT_RATE_MEMBER)
+    discountRate = DISCOUNT_RATE_MEMBER
+elif(menuSelection == 'B'):
+    print("You selected B")
+    discountRate = DISCOUNT_RATE_SENIOR
+    
