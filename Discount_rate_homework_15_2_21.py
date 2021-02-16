@@ -21,7 +21,7 @@ elif(menuSelection == 'B'):
     discountRate = DISCOUNT_RATE_SENIOR
 
 else:
-    print("LOL YOU SUCK")
+    print("LOL")
     discountRate = DISCOUNT_RATE_NONE
 
 discountAmount = originalPrice * discountRate
@@ -30,18 +30,16 @@ subTotal = howMany * discountPrice
 tax = subTotal * TAX_RATE
 totalCost = subTotal + tax
 
-print(str((discountRate * 100)) + "%" )
-
 if(totalCost > 0.0):
-    print(str("User              " + userName))
-    print(str("Item Name         " + itemName))
-    print(str("Original Price   $" + originalPrice))
-    print(str(("Discount         " + discountRate * 100)) + "%" )
-    print(str(discountAmount))
-    print(str(discountPrice))
-    print(str(howMany))
-    print(str(subTotal))
-    print(str(tax))
-    print(str(totalCost))
+    print("User              " + userName)
+    print("Item Name         " + itemName)
+    print("Original Price   $" + originalPrice)
+    print(("Discount         " + discountRate * 100) + "%" )
+    print("Discount Amount  $" + discountAmount)
+    print("Discounted Price $" + discountPrice)
+    print("Quantity          " + howMany)
+    print("Subtotal         $" + subTotal)
+    print("Tax              $" + tax)
+    print("Total Cost       $" + totalCost)
 print("Good bye!")
-print(discountRate)
+
