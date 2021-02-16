@@ -1,5 +1,7 @@
 number = int(input("Type a number! "))
 
 while(True):
-    if(number):
-        print("")
+    if(number % 2 == 0):
+        print("lol")
+        
+        
