@@ -10,11 +10,8 @@ base_screen_size = [1000,1000]
 
 
 
-grass_img = pygame.image.load('cobble2.png').convert()
+grass_img = pygame.image.load('3232cube.png').convert()
 grass_img.set_colorkey((0, 0, 0))
-
-goal_img = pygame.image.load('goal.png').convert()
-goal_img.set_colorkey((0, 0, 0))
 
 player_img = pygame.image.load('idle_0.png').convert()
 player_img.set_colorkey((0, 0, 0))
@@ -28,35 +25,6 @@ player_x = 5
 player_y = 5
 vel = 1
 
-a = 1
-a2 = 26.6
-
-matrix = [
-    [a, round(math.tan(math.radians(a2)), 3)],
-    [a, round(-math.tan(math.radians(a2)), 3)]
-]
-
-def transform_cords(cords):
-    cords = [cords[0] * 32, cords[1] * 32]
-    return [(cords[0] * matrix[0][0]) + (cords[1] * matrix[1][0]),
-            (cords[0] * matrix[0][1]) + (cords[1] * matrix[1][1])]
-
-
-def complex_camera(camera, target_rect):
-    # we want to center target_rect
-    x = -player_x + WIN_WIDTH/2 
-    y = -player_y + WIN_HEIGHT/2
-    # move the camera. Let's use some vectors so we can easily substract/multiply
-    camera.topleft += (pygame.Vector2((x, y)) - pygame.Vector2(camera.topleft)) * 0.06 # add some smoothness coolnes
-    # set max/min x/y so we don't see stuff outside the world
-    camera.x = max(-(camera.width-WIN_WIDTH), min(0, camera.x))
-    camera.y = max(-(camera.height-WIN_HEIGHT), min(0, camera.y))
-    
-    return camera
-
-
-
-
 
 f = open('map.txt')
 map_data = [[int(c) for c in row] for row in f.read().split('\n')]
@@ -69,11 +37,10 @@ while True:
         for x, tile in enumerate(row):
             if tile:
                 #pygame.draw.rect(display, (255, 255, 255), pygame.Rect(x * 10, y * 10, 10, 10), 1)
-                display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5))
+                display.blit(grass_img, (x * 16 - y * 16,x * 8 + y * 8))
                 if (x == player_x) and (y == player_y):
-                    display.blit(player_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
+                    display.blit(grass_img, (x * 16 - y * 16, x * 8 + y * 8 - 14))
                 
-
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
@@ -87,17 +54,22 @@ while True:
         mx, my = pygame.mouse.get_pos()
         true_mx = mx
         true_my = my
-        mx -= (screen.get_width() - base_screen_size[0]) // 2
-        my -= (screen.get_height() - base_screen_size[1]) // 2
-        mx /= base_screen_size[0] / display.get_width()
-        my /= base_screen_size[1] / display.get_height()
+        #mx -= (screen.get_width() - base_screen_size[0]) // 2
+        #my -= (screen.get_height() - base_screen_size[1]) // 2
+        #mx /= base_screen_size[0] / display.get_width()
+        #my /= base_screen_size[1] / display.get_height()
 
+        #map.x = (screen.x / TILE_WIDTH_HALF + screen.y / TILE_HEIGHT_HALF) /2;
+        #map.y = (screen.y / TILE_HEIGHT_HALF -(screen.x / TILE_WIDTH_HALF)) /2;
 
-        game_mx = ((mx + game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
-        game_my = ((-mx - game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
+       # game_mx = ((mx + game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
+       # game_my = ((-mx - game_scroll[0]) + (my + game_scroll[1])) / 18 * 100
 
-        if (x == game_mx) and (y == game_my):
-            display.blit(grass_img, (150 + x * 10 - y * 10, 100 + x * 5 + y * 5 - 14))
+        game_mx = (mx / 16 + my / 8) /2
+        game_my = (-mx / 8 - (mx / 16)) /2
+
+        if (x == 8) and (y == 0):
+            display.blit(grass_img,(x * 16 - y * 16,x * 8 + y * 8 - 14))
 
         keys = pygame.key.get_pressed()
     
