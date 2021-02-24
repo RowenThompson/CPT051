@@ -26,7 +26,7 @@ poolSquareFootage = poolLength * poolWidth
 coveredSquareFootage = houseSquareFootage + poolSquareFootage
 
 #Calculating then the result will be uncoveredSquareFootage
-uncoveredSquareFootage = houseSquareFootage - coveredSquareFootage
+uncoveredSquareFootage = propertySquareFootage - coveredSquareFootage
 #------------------------------------------------------------
 #start of report
 print("```` ```` ```` ```` ```` ```` ```` ```` ```` ```` ````")

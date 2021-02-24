@@ -1,45 +1,78 @@
+def author_aig():
+    print("Rowen Thompson")
+    print("CPT051")
+    print("Discount_rate_homework_15_2_21.py")
+    print("Febuary 2021")
+    print("------------------------")
+
 DISCOUNT_NAME_MEMBER = "Member"
 DISCOUNT_NAME_SENIOR = "Senior"
 DISCOUNT_NAME_NONE = "No Discount"
 DISCOUNT_RATE_MEMBER = 0.15
-DISCOUNT_RATE_SENIOR = 0.25
+DISCOUNT_RATE_SENIOR = 0.75
 DISCOUNT_RATE_NONE = 0.0
 TAX_RATE = .075
-print("Welcome")
-userName = str(input("userName= "))
-itemName = str(input("itemName= "))
-originalPrice = float(input("originalPrice= "))
-howMany = float(input("howMany= "))
-menuSelection = str(input("menuSelection= "))
+menuSelection = []
+def bye_end():
+    print("Bye!")
 
-if(menuSelection == 'A'):
-    print("Welcome back member!")
-    discountRate = DISCOUNT_RATE_MEMBER
+def welcome_start():
+    print("Hello and welcome!")
 
-elif(menuSelection == 'B'):
-    print("You selected B")
-    discountRate = DISCOUNT_RATE_SENIOR
+def error_message():
+    print("This is an invalid selection.")
 
-else:
-    print("LOL")
-    discountRate = DISCOUNT_RATE_NONE
+def questions_for_input():
+    userName = str(input("userName = "))
+    itemName = str(input("itemName = "))
+    originalPrice = float(input("originalPrice = "))
+    howMany = str(input("howMany = "))
+    menuSelection = str(input("menuSelection = "))
 
-discountAmount = originalPrice * discountRate
-discountPrice = originalPrice - discountAmount
-subTotal = howMany * discountPrice
-tax = subTotal * TAX_RATE
-totalCost = subTotal + tax
+def show_discount_menu():
+    print("Select discount rate!")
+    print("A)Member : " + str(DISCOUNT_RATE_MEMBER) + '%')
+    print("B)Senior : " + str(DISCOUNT_RATE_SENIOR) + '%')
+    print("C)None : " + str(DISCOUNT_RATE_NONE) + '%')
 
-if(totalCost > 0.0):
-    print("User              " + userName)
-    print("Item Name         " + itemName)
-    print("Original Price   $" + originalPrice)
-    print(("Discount         " + discountRate * 100) + "%" )
-    print("Discount Amount  $" + discountAmount)
-    print("Discounted Price $" + discountPrice)
-    print("Quantity          " + howMany)
-    print("Subtotal         $" + subTotal)
-    print("Tax              $" + tax)
-    print("Total Cost       $" + totalCost)
-print("Good bye!")
+def menu_selection_input():
+    if(menuSelection == 'A'):
+        print("You selected Member!")
+        discountRate = DISCOUNT_RATE_MEMBER
+
+    elif(menuSelection == 'B'):
+        print("You selected Senior")
+        discountRate = DISCOUNT_RATE_SENIOR
+
+    else:
+        print("You selected None")
+        discountRate = DISCOUNT_RATE_NONE
+
+#discountAmount = originalPrice * discountRate
+#discountPrice = originalPrice - discountAmount
+#subTotal = howMany * discountPrice
+#tax = subTotal * TAX_RATE
+#totalCost = subTotal + tax
+
+#if(totalCost > 0.0):
+    #print("User              " + str(userName))
+    #print("Item Name         " + str(itemName))
+    #print("Original Price   $" + str(originalPrice))
+    #print(("Discount         " + str(discountRate * 100) + "%" ))
+    #print("Discount Amount  $" + str(discountAmount))
+    #print("Discounted Price $" + str(discountPrice))
+    #print("Quantity          " + str(howMany))
+    #print("Subtotal         $" + str(subTotal))
+    #print("Tax              $" + str(tax))
+    #print("Total Cost       $" + str(totalCost))
+
+
+author_aig()
+
+questions_for_input()
+
+show_discount_menu()
+
+menu_selection_input()
+
 
