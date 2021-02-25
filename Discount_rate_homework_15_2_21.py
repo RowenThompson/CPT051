@@ -20,11 +20,7 @@ DISCOUNT_RATE_SENIOR = 0.75
 DISCOUNT_RATE_NONE = 0.0
 TAX_RATE = .075
 
-def bye_end():
-    print("Bye!")
-
-def welcome_start():
-    print("Hello and welcome!")
+print("Hello and welcome!")
 
 def error_message():
     print("This is an invalid selection.")
@@ -94,4 +90,6 @@ show_discount_menu()
 
 menu_selection_input()
 
-info_receipt()
+info_receipt()    
+
+print("Bye")
