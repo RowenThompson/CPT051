@@ -5,6 +5,13 @@ def author_aig():
     print("Febuary 2021")
     print("------------------------")
 
+originalPrice = 24.95
+howMany = 4
+discountRate = 0.0
+menuSelection = 'S'
+userName = 'Jill'
+itemName = 'Flashlight'
+
 DISCOUNT_NAME_MEMBER = "Member"
 DISCOUNT_NAME_SENIOR = "Senior"
 DISCOUNT_NAME_NONE = "No Discount"
@@ -12,10 +19,7 @@ DISCOUNT_RATE_MEMBER = 0.15
 DISCOUNT_RATE_SENIOR = 0.75
 DISCOUNT_RATE_NONE = 0.0
 TAX_RATE = .075
-originalPrice = 0
-howMany = 0
-discountRate = 0
-menuSelection = []
+
 def bye_end():
     print("Bye!")
 
@@ -57,19 +61,30 @@ subTotal = howMany * discountPrice
 tax = subTotal * TAX_RATE
 totalCost = subTotal + tax
 
-def receipt_total():
-    if(totalCost > 0.0):
-        print("User              " + str(userName))
-        print("Item Name         " + str(itemName))
-        print("Original Price   $" + str(originalPrice))
-        print(("Discount         " + str(discountRate * 100) + "%" ))
-        print("Discount Amount  $" + str(discountAmount))
-        print("Discounted Price $" + str(discountPrice))
-        print("Quantity          " + str(howMany))
-        print("Subtotal         $" + str(subTotal))
-        print("Tax              $" + str(tax))
-        print("Total Cost       $" + str(totalCost))
 
+if(totalCost > 0.0):
+    print("User              " + str(userName))
+    print("Item Name         " + str(itemName))
+    print("Original Price   $" + str(originalPrice))
+    print(("Discount         " + str(discountRate * 10) + "%" ))
+    print("Discount Amount  $" + str(discountAmount))
+    print("Discounted Price $" + str(discountPrice))
+    print("Quantity          " + str(howMany))
+    print("Subtotal         $" + str(subTotal))
+    print("Tax              $" + str(tax))
+    print("Total Cost       $" + str(totalCost))
+
+def info_receipt():
+    print("User              " + str(userName))
+    print("Item Name         " + str(itemName))
+    print("Original Price   $" + str(originalPrice))
+    print(("Discount         " + str(discountRate * 100) + "%" ))
+    print("Discount Amount  $" + str(discountAmount))
+    print("Discounted Price $" + str(discountPrice))
+    print("Quantity          " + str(howMany))
+    print("Subtotal         $" + str(subTotal))
+    print("Tax              $" + str(tax))
+    print("Total Cost       $" + str(totalCost))
 
 author_aig()
 
@@ -79,4 +94,4 @@ show_discount_menu()
 
 menu_selection_input()
 
-receipt_total()
+info_receipt()
