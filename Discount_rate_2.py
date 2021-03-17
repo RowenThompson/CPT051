@@ -14,28 +14,29 @@ userName = str(input("userName = "))
 itemName = str(input("itemName = "))
 originalPrice = float(input("originalPrice = "))
 howMany = float(input("howMany = "))
+
+print("Which discount are you gonna take?")
+print("A.)Member : " + str(DISCOUNT_RATE_MEMBER))
+print("B.)Senior : " + str(DISCOUNT_RATE_SENIOR))
+print("C.)None : " + str(DISCOUNT_RATE_NONE))
+
 menuSelection = input("menuSelection = ")
-#def take_input():
-    #print("Enter your selection here")
-    #selection = input()
-    #selection = selection.upper()
-    #selection = selection[0]
-    #return selection
+
+menuSelection = menuSelection.upper()
+menuSelection = menuSelection[0]
 
 if(menuSelection == 'A'):
     print("Hello Member")
     discountRate = DISCOUNT_RATE_MEMBER
-    #menuSelection.append('B')
     
 elif(menuSelection == 'B'):
     print("Hello Senior")
     discountRate = DISCOUNT_RATE_SENIOR
-    #menuSelection.append('B')
     
 else:
     print("No Discount")
     DiscountRate = DISCOUNT_RATE_NONE
-    #menuSelection.append('Something')
+    
 discountAmount = originalPrice * discountRate
 discountPrice = originalPrice - discountAmount
 subTotal = howMany * discountPrice
@@ -48,12 +49,9 @@ if(totalCost > 0.0):
     print("originalPrice: " + str(originalPrice))
     print("discountRate: " + str(discountRate))
     print("discountAmount: " + str(discountAmount))
-    print("discountPrice:" + str(discountPrice))
+    print("discountPrice: " + str(discountPrice))
     print("howMany: " + str(howMany))
+    print("MenuSelection: " + str(menuSelection))
     print("subTotal: " + str(subTotal))
     print("tax: " + str(tax))
     print("totalCost: " + str(totalCost))
-
-#take_input()
-
-print(menuSelection)
