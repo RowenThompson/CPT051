@@ -44,6 +44,9 @@ tax = subTotal * TAX_RATE
 totalCost = subTotal + tax
 
 if(totalCost > 0.0):
+    print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+    print("ORDER REPORT")
+    print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
     print("User             " + str(userName))
     print("itemName         " + str(itemName))
     print("originalPrice    $" + str(originalPrice))
@@ -51,7 +54,6 @@ if(totalCost > 0.0):
     print("Discount Amount  $" + str(discountAmount))
     print("Discount Price   $" + str(discountPrice))
     print("Quantity         " + str(howMany))
-    #print("MenuSelection    " + str(menuSelection))
     print("Subtotal         $" + str(subTotal))
     print("Tax              $" + str(tax))
     print("Total Cost       $" + str(totalCost))
