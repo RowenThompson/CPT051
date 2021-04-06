@@ -35,6 +35,12 @@ propertyWidth = float(input("propertyWidth = "))
 
 propertySquareFootage = propertyLength * propertyWidth
 houseLength = propertyLength * LENGTH_RESTRICTION
+houseWidth = propertyWidth * WIDTH_RESTRICTION
+
+
+
+
+
 
 print(type(userName))
 print(type(propertyLength))
@@ -42,6 +48,9 @@ print(type(propertyWidth))
 print(type(propertySquareFootage))
 print(type(LENGTH_RESTRICTION))
 print(type(houseLength))
+print(type(WIDTH_RESTRICTION))
+print(type(houseWidth))
+
 
 
 print(userName)
@@ -51,3 +60,5 @@ print(str(propertySquareFootage))
 print(str(propertyLength))
 print(LENGTH_RESTRICTION)
 print(houseLength)
+print(WIDTH_RESTRICTION)
+print(houseWidth)
