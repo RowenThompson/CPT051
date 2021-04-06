@@ -27,38 +27,41 @@ def take_input():
 
 #start
 
-welcomeBanner()
+#welcomeBanner()
 
-userName = input("userName = ")
+#userName = input("userName = ")
 propertyLength = float(input("propertyLength = "))
 propertyWidth = float(input("propertyWidth = "))
 
 propertySquareFootage = propertyLength * propertyWidth
 houseLength = propertyLength * LENGTH_RESTRICTION
 houseWidth = propertyWidth * WIDTH_RESTRICTION
+houseSquareFootage = houseLength * houseWidth
+poolLength = houseLength * LENGTH_RESTRICTION
+poolWidth = houseWidth * WIDTH_RESTRICTION
 
 
 
+#print(type(userName))
+#print(type(propertyLength))
+#print(type(propertyWidth))
+#print(type(propertySquareFootage))
+#print(type(LENGTH_RESTRICTION))
+#print(type(houseLength))
+#print(type(WIDTH_RESTRICTION))
+#print(type(houseWidth))
 
 
 
-print(type(userName))
-print(type(propertyLength))
-print(type(propertyWidth))
-print(type(propertySquareFootage))
-print(type(LENGTH_RESTRICTION))
-print(type(houseLength))
-print(type(WIDTH_RESTRICTION))
-print(type(houseWidth))
-
-
-
-print(userName)
-print(str(propertyLength))
-print(str(propertyWidth))
-print(str(propertySquareFootage))
-print(str(propertyLength))
-print(LENGTH_RESTRICTION)
-print(houseLength)
+#print(userName)
+#print(str(propertyLength))
+#print(str(propertyWidth))
+#print(str(propertySquareFootage))
+#print(str(propertyLength))
+#print(LENGTH_RESTRICTION)
+#print(houseLength)
 print(WIDTH_RESTRICTION)
 print(houseWidth)
+#print(houseSquareFootage)
+#print(poolLength)
+print(poolWidth)
