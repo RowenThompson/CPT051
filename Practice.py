@@ -39,8 +39,9 @@ houseWidth = propertyWidth * WIDTH_RESTRICTION
 houseSquareFootage = houseLength * houseWidth
 poolLength = houseLength * LENGTH_RESTRICTION
 poolWidth = houseWidth * WIDTH_RESTRICTION
-
-
+poolSquareFootage = poolLength * poolWidth
+coveredSquareFootage = houseSquareFootage + poolSquareFootage
+uncoveredSquareFootage = propertySquareFootage - coveredSquareFootage
 
 #print(type(userName))
 #print(type(propertyLength))
@@ -60,8 +61,8 @@ poolWidth = houseWidth * WIDTH_RESTRICTION
 #print(str(propertyLength))
 #print(LENGTH_RESTRICTION)
 #print(houseLength)
-print(WIDTH_RESTRICTION)
-print(houseWidth)
+#print(WIDTH_RESTRICTION)
+#print(houseWidth)
 #print(houseSquareFootage)
 #print(poolLength)
-print(poolWidth)
+#print(poolWidth)
