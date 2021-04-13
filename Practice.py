@@ -14,10 +14,17 @@ HEATER_CAP_B = 8000.0
 HEATER_CAP_C = 15000.0
 HEATER_CAP_D = 25000.0
 POOL_DEPTH = 6
+CURRENCY = '$'
+
+
 
 def welcomeBanner():
     print("Welcome!")
 
+def sod_menu():
+    print("/// MENU ///")
+    print("A). " + SOD_NAME_A + ' = ' + CURRENCY + str(SOD_PRICE_A))
+    print("B). " + SOD_NAME_B + ' = ' + CURRENCY + str(SOD_PRICE_B))    
 def take_input():
     print("Enter your selection here")
     selection = input()
@@ -29,7 +36,7 @@ def take_input():
 
 #welcomeBanner()
 
-#userName = input("userName = ")
+
 propertyLength = float(input("propertyLength = "))
 propertyWidth = float(input("propertyWidth = "))
 
@@ -42,27 +49,30 @@ poolWidth = houseWidth * WIDTH_RESTRICTION
 poolSquareFootage = poolLength * poolWidth
 coveredSquareFootage = houseSquareFootage + poolSquareFootage
 uncoveredSquareFootage = propertySquareFootage - coveredSquareFootage
+sod_menu()
 
-#print(type(userName))
-#print(type(propertyLength))
-#print(type(propertyWidth))
-#print(type(propertySquareFootage))
-#print(type(LENGTH_RESTRICTION))
-#print(type(houseLength))
-#print(type(WIDTH_RESTRICTION))
-#print(type(houseWidth))
+menuSelection = take_input()
+
+if(menuSelection == 'A'):
+    sodName = SOD_NAME_A
+    sodPrice = SOD_PRICE_A
+
+else:
+    sodName = SOD_NAME_B
+    sodPrice = SOD_PRICE_B
+
+sodCost = uncoveredSquareFootage * sodPrice
+waterVolume = poolSquareFootage * POOL_DEPTH
+
+print(menuSelection)
+print(sodName)
+print(sodCost)
+print(waterVolume)
+print("///////////////////////////")
+waterVolume_format = "{:.1f}".format(waterVolume)
+print(waterVolume_format)
+print(type(waterVolume_format))
 
 
 
-#print(userName)
-#print(str(propertyLength))
-#print(str(propertyWidth))
-#print(str(propertySquareFootage))
-#print(str(propertyLength))
-#print(LENGTH_RESTRICTION)
-#print(houseLength)
-#print(WIDTH_RESTRICTION)
-#print(houseWidth)
-#print(houseSquareFootage)
-#print(poolLength)
-#print(poolWidth)
+print("Pool Volume           " + str(waterVolume_format) + ' cu.ft.')
