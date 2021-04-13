@@ -64,14 +64,36 @@ else:
 sodCost = uncoveredSquareFootage * sodPrice
 waterVolume = poolSquareFootage * POOL_DEPTH
 
-print(menuSelection)
-print(sodName)
-print(sodCost)
-print(waterVolume)
-print("///////////////////////////")
+if(waterVolume <= HEATER_CAP_A):
+    heaterName = HEATER_NAME_A
+    print("A and only A")
+
+elif(waterVolume <= HEATER_CAP_B):
+    heaterName = HEATER_NAME_B
+    print("B and only B")
+
+elif(waterVolume <= HEATER_CAP_C):
+    heaterName = HEATER_NAME_C
+    print("C and only C")    
+  
+else:
+    
+      
+    
+
+
+
+
+
+
+#print(menuSelection)
+#print(sodName)
+#print(sodCost)
+#print(waterVolume)
+#print("///////////////////////////")
 waterVolume_format = "{:.1f}".format(waterVolume)
-print(waterVolume_format)
-print(type(waterVolume_format))
+#print(waterVolume_format)
+#print(type(waterVolume_format))
 
 
 
