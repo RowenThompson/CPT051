@@ -36,9 +36,9 @@ def take_input():
 
 #welcomeBanner()
 
-
-propertyLength = float(input("propertyLength = "))
-propertyWidth = float(input("propertyWidth = "))
+userName = input("Username = ")
+propertyLength = float(input("Property Length = "))
+propertyWidth = float(input("Property Width = "))
 
 propertySquareFootage = propertyLength * propertyWidth
 houseLength = propertyLength * LENGTH_RESTRICTION
@@ -84,7 +84,7 @@ coveredSquareFootage_format = "{:.1f}".format(coveredSquareFootage)
 uncoveredSquareFootage_format = "{:.1f}".format(uncoveredSquareFootage)
 
 print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
-print("Bob's Property Report.")
+print(userName + 's' + " Property Report.")
 print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
 print("Property Length                  " + str(propertyLength) + ' ft')
 print("Property Width                   " + str(propertyWidth) + ' ft')
