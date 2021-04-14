@@ -66,35 +66,48 @@ waterVolume = poolSquareFootage * POOL_DEPTH
 
 if(waterVolume <= HEATER_CAP_A):
     heaterName = HEATER_NAME_A
-    print("A and only A")
 
 elif(waterVolume <= HEATER_CAP_B):
     heaterName = HEATER_NAME_B
-    print("B and only B")
 
 elif(waterVolume <= HEATER_CAP_C):
-    heaterName = HEATER_NAME_C
-    print("C and only C")    
+    heaterName = HEATER_NAME_C   
   
 else:
-    
-      
-    
+    heaterName = HEATER_NAME_D
+    heaterName = HEATER_NAME_E
 
 
-
-
-
-
-#print(menuSelection)
-#print(sodName)
-#print(sodCost)
-#print(waterVolume)
-#print("///////////////////////////")
+sodCost_format = "{:.2f}".format(sodCost)
 waterVolume_format = "{:.1f}".format(waterVolume)
-#print(waterVolume_format)
-#print(type(waterVolume_format))
+coveredSquareFootage_format = "{:.1f}".format(coveredSquareFootage)
+uncoveredSquareFootage_format = "{:.1f}".format(uncoveredSquareFootage)
 
-
-
-print("Pool Volume           " + str(waterVolume_format) + ' cu.ft.')
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Bob's Property Report.")
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Property Length                  " + str(propertyLength) + ' ft')
+print("Property Width                   " + str(propertyWidth) + ' ft')
+print("Property Area                    " + str(propertySquareFootage) + ' sq.ft.')
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Design Length Restriction        " + str((LENGTH_RESTRICTION * 100)) + ' %' )
+print("Design Width Restriction         " + str((WIDTH_RESTRICTION * 100)) + ' %' )
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("House Length                     " + str(houseLength) + ' ft')
+print("House Width                      " + str(houseWidth) + ' ft')
+print("House Area                       " + str(houseSquareFootage) + ' sq.ft.')
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Pool Length                      " + str(poolLength) + ' ft')
+print("Pool Width                       " + str(poolWidth) + ' ft')
+print("Pool Area                        " + str(poolSquareFootage) + ' sq.ft.')
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Pool Volume                      " + str(waterVolume) + ' cu.ft.')
+print("Heater Unit                      " + heaterName)
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Covered Area                     " + str(coveredSquareFootage_format))
+print("Uncovered Area                   " + str(uncoveredSquareFootage_format))
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("Sod Name                         " + sodName)
+print("Sod Price (per sq.ft.)           " + str(sodPrice))
+print("Sod Cost                         " + CURRENCY + str(sodCost_format))
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
