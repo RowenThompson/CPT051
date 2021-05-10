@@ -6,19 +6,15 @@ DISCOUNT_NAME_QUIT = 'quit'
 DISCOUNT_RATE_MEMBER = 0.15
 DISCOUNT_RATE_SENIOR = 0.25
 DISCOUNT_RATE_NONE = 0.0
-ITEM_NAME_PREMIUM = '3 Hours Of Ice Hockey Practice'
-ITEM_NAME_SPECIAL = '2 Hours Of Ice Hockey Practice'
-ITEM_NAME_BASIC = '1 Hours Of Ice Hockey Practice'
+ITEM_NAME_PREMIUM = 'Ultra Size Bag of Eggs'
+ITEM_NAME_SPECIAL = 'Standard Size Bag of Eggs'
+ITEM_NAME_BASIC = 'Small Size Bag of Eggs'
 ITEM_PRICE_PREMIUM = 55.95
 ITEM_PRICE_SPECIAL = 24.95
 ITEM_PRICE_BASIC = 15.95
 DISCOUNT_MEMBER = ''
 discountPrice = 0.0
 itemSelection = ''
-
-def show_item_menu():
-    print("Items")
-
 
 def show_discount_menu():
     print("This is the Discount Rate Menu.")
@@ -27,21 +23,26 @@ def show_discount_menu():
     print("C.) None = " + str(DISCOUNT_RATE_NONE))
     print("Q.) Quit Program")
 
+def show_item_menu():
+    print("This is the Item Menu.")
+    print("A.) " + ITEM_NAME_PREMIUM + ' = $' + str(ITEM_PRICE_PREMIUM))
+    print("B.) " + ITEM_NAME_SPECIAL + ' = $' + str(ITEM_PRICE_SPECIAL))
+    print("C.) " + ITEM_NAME_BASIC + ' = $' + str(ITEM_PRICE_BASIC))
+
 def error_message():
     print("This is an invalid selection.")
 
 #start
 print("Welcome to the Carolinian Ice Palace!")
-userName = input("userName= ")
-
-show_item_menu()
-
-itemSelection = input("itemSelection= ")
+userName = input("Username= ")
 
 show_discount_menu()
 
 
-rateSelection = input("rateSelection= ")
+rateSelection = input("Rate Selection= ")
+
+rateSelection = rateSelection.upper()
+rateSelection = rateSelection[0]
 
 while((rateSelection != 'A') and (rateSelection != 'B') and (rateSelection != 'C') and (rateSelection != 'Q')): #decision
     error_message()
@@ -58,9 +59,14 @@ elif(rateSelection == 'Q'):
 else:
     discountRate = DISCOUNT_RATE_NONE
 
+show_item_menu()
 
+itemSelection = input("Item Selection= ")
 
-howMany = float(input("howMany= "))
+itemSelection = itemSelection.upper()
+itemSelection = itemSelection[0]
+
+howMany = float(input("How Many= "))
 
 if(itemSelection == 'A'):
     itemName = ITEM_NAME_PREMIUM
@@ -78,16 +84,26 @@ discountAmount = itemPrice * discountRate
 discountPrice = itemPrice - discountAmount
 subTotal = howMany * discountPrice
 tax = subTotal * TAX_RATE
-totalCost = subTotal - tax
+totalCost = subTotal + tax
 
-print("Receipt= ")
-print(userName)
-print(itemName)
-print(itemPrice)
-print(discountRate)
-print(discountAmount)
-print(discountPrice)
-print(howMany)
-print(subTotal)
-print(tax)
-print(totalCost)
+itemPrice_format = "{:.2f}".format(itemPrice)
+discountAmount_format = "{:.2f}".format(discountAmount)
+discountPrice_format = "{:.2f}".format(discountPrice)
+howMany_format = "{:.0f}".format(howMany)
+subTotal_format = "{:.2f}".format(subTotal)
+tax_format = "{:.2f}".format(tax)
+totalCost_format = "{:.2f}".format(totalCost)
+
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("ORDER REPORT")
+print("~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~ ~~~~")
+print("User                " + userName)
+print("Item Name           " + itemName)
+print("Original Price      " + '$  ' + str(itemPrice_format))
+print("Discount            " + '   ' + str((discountRate * 100)) + '%' )
+print("Discount Amount     " + '$  ' + str(discountAmount_format))
+print("Discounted Price    " + '$  ' + str(discountPrice_format))
+print("Quantity            " + '   ' + str(howMany_format))
+print("SubTotal            " + '$  ' + str(subTotal_format))
+print("Tax                 " + '$  ' + str(tax_format))
+print("Total Cost          " + '$  ' + str(totalCost_format))
