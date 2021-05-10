@@ -6,15 +6,19 @@ DISCOUNT_NAME_QUIT = 'quit'
 DISCOUNT_RATE_MEMBER = 0.15
 DISCOUNT_RATE_SENIOR = 0.25
 DISCOUNT_RATE_NONE = 0.0
-ITEM_NAME_PREMIUM = ''
-ITEM_NAME_SPECIAL = ''
-ITEM_NAME_BASIC = ''
+ITEM_NAME_PREMIUM = '3 Hours Of Ice Hockey Practice'
+ITEM_NAME_SPECIAL = '2 Hours Of Ice Hockey Practice'
+ITEM_NAME_BASIC = '1 Hours Of Ice Hockey Practice'
 ITEM_PRICE_PREMIUM = 55.95
 ITEM_PRICE_SPECIAL = 24.95
 ITEM_PRICE_BASIC = 15.95
 DISCOUNT_MEMBER = ''
 discountPrice = 0.0
 itemSelection = ''
+
+def show_item_menu():
+    print("Items")
+
 
 def show_discount_menu():
     print("This is the Discount Rate Menu.")
@@ -27,10 +31,15 @@ def error_message():
     print("This is an invalid selection.")
 
 #start
-print("Welcome!")
+print("Welcome to the Carolinian Ice Palace!")
 userName = input("userName= ")
 
+show_item_menu()
+
+itemSelection = input("itemSelection= ")
+
 show_discount_menu()
+
 
 rateSelection = input("rateSelection= ")
 
@@ -41,13 +50,15 @@ if(rateSelection == 'A'):
     discountRate = DISCOUNT_RATE_MEMBER
 
 elif(rateSelection == 'B'):
-    DiscountRate = DISCOUNT_RATE_SENIOR
+    discountRate = DISCOUNT_RATE_SENIOR
 
 elif(rateSelection == 'Q'):
     print("Have a nice day!")
     exit()
 else:
     discountRate = DISCOUNT_RATE_NONE
+
+
 
 howMany = float(input("howMany= "))
 
