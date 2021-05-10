@@ -100,10 +100,10 @@ for item in List_for_gaming:
     elif item == 'C':
         print("You want Call of duty warfare?")
 print("Do you want to buy anything else?")
-while((BuyMore != 'Y') and (BuyMore != 'N')): #decision
-    error_message(exit):
-if BuyMore:
-    while(BuyMore <= 3):
-        BuyMore += 1
-elif():
-    exit
+#while((BuyMore != 'Y') and (BuyMore != 'N')): #decision
+    #error_message(exit):
+#if BuyMore:
+    #while(BuyMore <= 3):
+    #BuyMore += 1
+#elif():
+    #exit
