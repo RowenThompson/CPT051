@@ -15,6 +15,7 @@ ITEM_PRICE_BASIC = 15.95
 DISCOUNT_MEMBER = ''
 discountPrice = 0.0
 itemSelection = ''
+rateSelection = ''
 
 def show_discount_menu():
     print("This is the Discount Rate Menu.")
@@ -32,12 +33,12 @@ def show_item_menu():
 def error_message():
     print("This is an invalid selection.")
 
+
 #start
 print("Welcome to the Carolinian Ice Palace!")
 userName = input("Username= ")
 
 show_discount_menu()
-
 
 rateSelection = input("Rate Selection= ")
 
@@ -46,6 +47,11 @@ rateSelection = rateSelection[0]
 
 while((rateSelection != 'A') and (rateSelection != 'B') and (rateSelection != 'C') and (rateSelection != 'Q')): #decision
     error_message()
+    show_discount_menu()
+    rateSelection = input("Rate Selection= ")
+    
+rateSelection = rateSelection.upper()
+rateSelection = rateSelection[0]
 
 if(rateSelection == 'A'):
     discountRate = DISCOUNT_RATE_MEMBER
@@ -66,7 +72,13 @@ itemSelection = input("Item Selection= ")
 itemSelection = itemSelection.upper()
 itemSelection = itemSelection[0]
 
-howMany = float(input("How Many= "))
+while((itemSelection != 'A') and (itemSelection != 'B') and (itemSelection != 'C')):
+    error_message()
+    show_item_menu()
+    itemSelection = input("Item Selection= ")
+
+itemSelection = itemSelection.upper()
+itemSelection = itemSelection[0]
 
 if(itemSelection == 'A'):
     itemName = ITEM_NAME_PREMIUM
@@ -79,6 +91,8 @@ elif(itemSelection == 'B'):
 else:
     itemName = ITEM_NAME_BASIC
     itemPrice = ITEM_PRICE_BASIC
+
+howMany = float(input("How Many= "))
 
 discountAmount = itemPrice * discountRate
 discountPrice = itemPrice - discountAmount
@@ -103,7 +117,7 @@ print("Original Price      " + '$  ' + str(itemPrice_format))
 print("Discount            " + '   ' + str((discountRate * 100)) + '%' )
 print("Discount Amount     " + '$  ' + str(discountAmount_format))
 print("Discounted Price    " + '$  ' + str(discountPrice_format))
-print("Quantity            " + '   ' + str(howMany_format))
+print("Quantity            " + '   ' + str(howMany))
 print("SubTotal            " + '$  ' + str(subTotal_format))
 print("Tax                 " + '$  ' + str(tax_format))
 print("Total Cost          " + '$  ' + str(totalCost_format))
